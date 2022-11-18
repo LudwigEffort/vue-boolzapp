@@ -17,7 +17,6 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 2rem;
-    background-color: salmon;
     height: 90vh;
     display: flex;
 }
@@ -90,7 +89,13 @@ body {
 
 .search-container {
     background-color: white;
-    height: 40px;
+    color: gray;
+    padding: 1rem;
 }
+
+.search-container i {
+    margin: 0 1rem;
+}
+
 
 

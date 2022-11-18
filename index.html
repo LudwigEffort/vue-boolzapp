@@ -11,7 +11,8 @@
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="root">
+
         <div class="side-bar-container">
             <div class="user-info-container">
                 <div class="name">
@@ -40,128 +41,29 @@
             <div class="contacts-container">
 
                 <!-- Test contacts -->
-                <div class="contact">
+                <div 
+                    v-for="eleContact in arrContacts" 
+                    :key="eleContact.avatar"
+                    class="contact">
+
                     <div class="contact-info">
-                        <img src="img/avatar_1.jpg" alt="">
+                        <img :src="'img/avatar' + eleContact.avatar + '.jpg'" alt="">
                         <div class="contact-text">
-                            <h4>Michele</h4>
+                            <h4>{{ eleContact.name }}</h4>
                             <p>Last message</p>
                         </div>
                     </div>
                     <div class="time">
                         <p>12:00</p>
                     </div>
-                </div>
 
-                <div class="contact">
-                    <div class="contact-info">
-                        <img src="img/avatar_1.jpg" alt="">
-                        <div class="contact-text">
-                            <h4>Michele</h4>
-                            <p>Last message</p>
-                        </div>
-                    </div>
-                    <div class="time">
-                        <p>12:00</p>
-                    </div>
                 </div>
-
-                <div class="contact">
-                    <div class="contact-info">
-                        <img src="img/avatar_1.jpg" alt="">
-                        <div class="contact-text">
-                            <h4>Michele</h4>
-                            <p>Last message</p>
-                        </div>
-                    </div>
-                    <div class="time">
-                        <p>12:00</p>
-                    </div>
-                </div>
-
-                <div class="contact">
-                    <div class="contact-info">
-                        <img src="img/avatar_1.jpg" alt="">
-                        <div class="contact-text">
-                            <h4>Michele</h4>
-                            <p>Last message</p>
-                        </div>
-                    </div>
-                    <div class="time">
-                        <p>12:00</p>
-                    </div>
-                </div>
-
-                <div class="contact">
-                    <div class="contact-info">
-                        <img src="img/avatar_1.jpg" alt="">
-                        <div class="contact-text">
-                            <h4>Michele</h4>
-                            <p>Last message</p>
-                        </div>
-                    </div>
-                    <div class="time">
-                        <p>12:00</p>
-                    </div>
-                </div>
-
-                <div class="contact">
-                    <div class="contact-info">
-                        <img src="img/avatar_1.jpg" alt="">
-                        <div class="contact-text">
-                            <h4>Michele</h4>
-                            <p>Last message</p>
-                        </div>
-                    </div>
-                    <div class="time">
-                        <p>12:00</p>
-                    </div>
-                </div>
-
-                <div class="contact">
-                    <div class="contact-info">
-                        <img src="img/avatar_1.jpg" alt="">
-                        <div class="contact-text">
-                            <h4>Michele</h4>
-                            <p>Last message</p>
-                        </div>
-                    </div>
-                    <div class="time">
-                        <p>12:00</p>
-                    </div>
-                </div>
-
-                <div class="contact">
-                    <div class="contact-info">
-                        <img src="img/avatar_1.jpg" alt="">
-                        <div class="contact-text">
-                            <h4>Michele</h4>
-                            <p>Last message</p>
-                        </div>
-                    </div>
-                    <div class="time">
-                        <p>12:00</p>
-                    </div>
-                </div>
-
-                <div class="contact">
-                    <div class="contact-info">
-                        <img src="img/avatar_1.jpg" alt="">
-                        <div class="contact-text">
-                            <h4>Michele</h4>
-                            <p>Last message</p>
-                        </div>
-                    </div>
-                    <div class="time">
-                        <p>12:00</p>
-                    </div>
-                </div>
-
             </div>
-        </div>
-        
-        <div class="chat-container">
 
+        </div>
+
+        <div class="chat-container">
+            
         </div>
     </div>
 </body>

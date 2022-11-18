@@ -133,7 +133,8 @@ body {
 .chat-container {
     width: 100%;
     flex: 1 0 calc((2/3)* 100%);
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
+    background-image: url(../img/mine.jpg);
     display: flex;
     flex-direction: column;
 }
@@ -161,5 +162,27 @@ body {
     margin: 0 1rem;
 }
 
+.chat {
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    padding: 1rem;
+    flex: 0 1 auto;
+    max-width:  40%;
+    border-radius: 0.5rem;
+}
+
+.message-send {
+    align-self: flex-end;
+    background-color: #D5F9BA;
+}
+
+.message-received {
+    align-self: flex-start;
+    background-color: white;
+}
 
 

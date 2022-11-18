@@ -22,15 +22,13 @@ body {
 }
 
 .side-bar-container {
-    /* width: 100%;
-    height: 100%; */
     flex: 1 1 calc((1/3)* 100%);
     background-color: lightcoral;
+    display: flex;
+    flex-direction: column;
 }
 
 .chat-container {
-    /* width: 100%;
-    height: 100%; */
     flex: 1 1 calc((2/3)* 100%);
     background-color: lightgreen;
 }
@@ -95,6 +93,41 @@ body {
 
 .search-container i {
     margin: 0 1rem;
+}
+
+.contacts-container {
+    overflow-y: scroll;
+    flex: 1 0 0;
+}
+
+.contact {
+    background-color: white;
+    border: 1px solid black;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-info img {
+    display: block;
+    width: 40px;
+    border-radius: 5rem;
+    margin-right: 5px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info p {
+    font-size: smaller;
+    color: grey;
+}
+
+.contact:hover {
+    background-color: #E9EBEB;
+    cursor: pointer;
 }
 
 

@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: small;
+}
+
 body {
     background: linear-gradient(180deg, #009688 10%, #DADBD4 10%);
     height: 100vh;
@@ -34,7 +38,7 @@ body {
 
 .user-info-container {
     padding: 0.5rem;
-    background-color: lightskyblue;
+    background-color: lightsalmon;
     display: flex; 
     justify-content: space-between;
     align-items: center;
@@ -51,6 +55,7 @@ body {
 
 .icons i {
     margin: 0 5px;
+    font-size: 1.2rem;
 }
 
 .user-info-container img {
@@ -60,8 +65,27 @@ body {
 }
 
 .notifications-container {
-    background-color: lightpink;
-    height: 50px;
+    background-color: lightblue;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.noti-icon i {
+    background-color: white;
+    color: lightblue;
+    font-size: 1.2rem;
+    border-radius: 5rem;
+    padding: 8px;
+    margin-right: 5px;
+}
+
+.noti-text p {
+    font-weight: bold;
+}
+
+.noti-text a {
+    color: grey;
 }
 
 .search-container {

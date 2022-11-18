@@ -169,10 +169,12 @@ body {
 }
 
 .message {
+    position: relative;
     padding: 1rem;
     flex: 0 1 auto;
     max-width:  40%;
     border-radius: 0.5rem;
+    overflow-wrap: break-word;
 }
 
 .message-send {
@@ -185,4 +187,29 @@ body {
     background-color: white;
 }
 
+.message .send-date {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    font-size: 0.7rem;
+}
 
+.message .message-menu-toggler {
+    display: none;
+}
+
+.message:hover .message-menu-toggler {
+    display: block;
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+}
+
+.message .message-menu {
+    list-style: none;
+    background-color: white;
+}
+
+.message .message-menu li {
+    padding: 1rem;
+}

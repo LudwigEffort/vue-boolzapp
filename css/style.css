@@ -28,12 +28,6 @@ body {
     flex-direction: column;
 }
 
-.chat-container {
-    width: 100%;
-    flex: 1 0 calc((2/3)* 100%);
-    background-color: lightgreen;
-}
-
 .user-info-container {
     padding: 0.5rem;
     background-color: lightsalmon;
@@ -54,6 +48,11 @@ body {
 .icons i {
     margin: 0 5px;
     font-size: 1.2rem;
+}
+
+.icons i:hover {
+    cursor: pointer;
+    color: lightgrey;
 }
 
 .user-info-container img {
@@ -129,6 +128,37 @@ body {
 .contact:hover {
     background-color: #E9EBEB;
     cursor: pointer;
+}
+
+.chat-container {
+    width: 100%;
+    flex: 1 0 calc((2/3)* 100%);
+    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-chat-bar{
+    background-color: white;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat {
+    overflow-y: scroll;
+    flex: 1 0 0;
+}
+
+.write-bar  {
+    background-color: white;
+    padding: 1rem;
+}
+
+.write-bar i {
+    padding: 0.5rem;
+    margin: 0 1rem;
 }
 
 

@@ -64,9 +64,11 @@
         <div class="chat-container">
             <div class="contact-chat-bar">
                 <div class="contact-info">
-                    <img src="img/avatar_1.jpg" alt="">
+                    <img 
+                    :src="'img/avatar' + arrContacts[activeIndex].avatar + '.jpg'" 
+                    :alt="arrContacts[activeIndex].name">
                     <div class="contact-tex">
-                        <h4>Michele</h4>
+                        <h4>{{ arrContacts[activeIndex].name }}</h4>
                         <p>Status</p>
                     </div>
                 </div>
@@ -77,19 +79,19 @@
                 </div>
             </div>
             <div class="chat">
-                <div class="message message-send">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum blanditiis vel saepe ipsam. Recusandae illo ipsa fugit odit temporibus rem sed vitae obcaecati id repellat? Eveniet nihil quibusdam repellendus quidem?
+                <div 
+                    v-for="objMessage in arrContacts[activeIndex].messages" 
+                    class="message"
+                    :class="'message-' + objMessage.status">
+                    {{ objMessage.message }}
                     <div class="send-date">
-                        00:00
+                        {{ objMessage.date }}
                     </div>
                     <i class="fa-solid fa-chevron-down message-menu-toggler"></i>
                     <ul class="message-menu">
                         <li>Message info</li>
                         <li>Message delete</li>
                     </ul>
-                </div>
-                <div class="message message-received">
-                    Lorem, ipsum dolor.
                 </div>
             </div>
             <div class="write-bar">

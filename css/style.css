@@ -171,13 +171,15 @@ body {
 .message {
     position: relative;
     padding: 1rem;
+    margin-bottom: 0.5rem  ;
     flex: 0 1 auto;
+    min-width: 120px;
     max-width:  40%;
     border-radius: 0.5rem;
     overflow-wrap: break-word;
 }
 
-.message-send {
+.message-sent {
     align-self: flex-end;
     background-color: #D5F9BA;
 }

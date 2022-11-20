@@ -163,8 +163,8 @@ new Vue({
                     }
                 ],
             }
-        ]
-
+        ],
+    activeIndex: 0,
     }
 })
 

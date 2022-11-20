@@ -42,9 +42,10 @@
 
                 <!-- Test contacts -->
                 <div 
-                    v-for="eleContact in arrContacts" 
+                    v-for="(eleContact, i) in arrContacts" 
                     :key="eleContact.avatar"
-                    class="contact">
+                    class="contact"
+                    @click="setActiveIndex(i)">
 
                     <div class="contact-info">
                         <img :src="'img/avatar' + eleContact.avatar + '.jpg'" alt="">

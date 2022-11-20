@@ -165,6 +165,12 @@ new Vue({
             }
         ],
     activeIndex: 0,
-    }
-})
+    nweMessage: '',
+    },
+    methods: {
+        setActiveIndex(index){
+            this.activeIndex = index;
+        }
+    },
+});
 

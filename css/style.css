@@ -125,6 +125,14 @@ body {
     color: grey;
 }
 
+.contact-in{
+    display: block;
+}
+
+.contact-out{
+    display: none;
+}
+
 .contact:hover {
     background-color: #E9EBEB;
     cursor: pointer;

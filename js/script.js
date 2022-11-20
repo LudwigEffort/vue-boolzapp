@@ -165,19 +165,20 @@ new Vue({
             }
         ],
     activeIndex: 0,
-    nweMessage: '',
+    newMessage: '',
+    searchString: '',
     },
     methods: {
         setActiveIndex(index){
             this.activeIndex = index;
         },
-        sendMessage(){
+        sendMessage(){ //TODO: insert check empty string 
             this.arrContacts[this.activeIndex].messages.push({
                 date: new Date().toISOString().replaceAll('-', '/').replaceAll('T', '').split('.')[0],
                 message: this.newMessage,
                 status: 'sent'
             });
-            this.nweMessage = '';
+            this.newMessage = '';
             const receiverIndex = this.activeIndex;
             setTimeout(() => {
                 this.arrContacts[receiverIndex].messages.push({
@@ -186,6 +187,16 @@ new Vue({
                     status: 'received'
                 });
             }, 1500);
+        },
+        searchContacts() {
+            for (let i = 0; i < this.arrContacts.length; i++) {
+                if (this.arrContacts[i] % 2 == 0) {
+                    this.arrContacts[i].visible = true;
+                }
+                else {
+                    this.arrContacts[i].visible = false;
+                }
+            }
         }
     },
 });

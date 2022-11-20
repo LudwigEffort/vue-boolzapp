@@ -36,7 +36,7 @@
             </div>
             <div class="search-container">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text">
+                <input type="text" @keyup="searchContacts()" v-model="searchString">
             </div>
             <div class="contacts-container">
 
@@ -45,6 +45,7 @@
                     v-for="(eleContact, i) in arrContacts" 
                     :key="eleContact.avatar"
                     class="contact"
+                    :class="arrContacts[i].visible === false ? 'contact-out' : 'contact-in'"
                     @click="setActiveIndex(i)">
 
                     <div class="contact-info">

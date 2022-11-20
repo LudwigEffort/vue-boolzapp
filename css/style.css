@@ -198,6 +198,10 @@ body {
     display: none;
 }
 
+.message .message-menu-toggler:hover {
+    cursor: pointer;
+}
+
 .message:hover .message-menu-toggler {
     display: block;
     position: absolute;
@@ -206,10 +210,21 @@ body {
 }
 
 .message .message-menu {
+    display: none; /* v-show */
     list-style: none;
     background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 5px grey;
+    position: absolute;
+    right: 0.5rem;
+    top: 1.5rem;
 }
 
 .message .message-menu li {
     padding: 1rem;
+}
+
+.message .message-menu li:hover {
+    cursor: pointer;
+    background-color: lightgrey;
 }

@@ -70,7 +70,7 @@
                     :alt="arrContacts[activeIndex].name">
                     <div class="contact-tex">
                         <h4>{{ arrContacts[activeIndex].name }}</h4>
-                        <p>Status</p>
+                        <p>Last access:</p>
                     </div>
                 </div>
                 <div class="icons">
@@ -97,7 +97,11 @@
             </div>
             <div class="write-bar">
                 <i class="fa-regular fa-face-smile"></i>
-                <input type="text" placeholder="Message">
+                <input 
+                    type="text" 
+                    placeholder="Message"
+                    v-model="newMessage"
+                    @keyup.enter="sendMessage">
                 <i class="fa-solid fa-microphone"></i>
             </div>
         </div>

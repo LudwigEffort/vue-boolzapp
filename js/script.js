@@ -170,6 +170,22 @@ new Vue({
     methods: {
         setActiveIndex(index){
             this.activeIndex = index;
+        },
+        sendMessage(){
+            this.arrContacts[this.activeIndex].messages.push({
+                date: new Date().toISOString().replaceAll('-', '/').replaceAll('T', '').split('.')[0],
+                message: this.newMessage,
+                status: 'sent'
+            });
+            this.nweMessage = '';
+            const receiverIndex = this.activeIndex;
+            setTimeout(() => {
+                this.arrContacts[receiverIndex].messages.push({
+                    date: new Date().toISOString().replaceAll('-', '/').replaceAll('T', '').split('.')[0],
+                    message: 'Ok',
+                    status: 'received'
+                });
+            }, 1500);
         }
     },
 });

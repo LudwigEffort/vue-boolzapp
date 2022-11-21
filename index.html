@@ -95,7 +95,7 @@
                     v-on:click="showToggle = !showToggle"></i>
                     <ul class="message-menu" v-show="showToggle">
                         <li>Message info</li>
-                        <li>Message delete</li>
+                        <li @click="deleteMessage()">Message delete</li>
                     </ul>
                 </div>
             </div>

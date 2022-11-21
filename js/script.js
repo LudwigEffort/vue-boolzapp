@@ -199,6 +199,9 @@ new Vue({
                 }
             }
         },
+        deleteMessage(index){
+            this.arrContacts[this.activeIndex].messages.splice(-1);
+        }
     },
 });
 

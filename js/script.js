@@ -164,9 +164,10 @@ new Vue({
                 ],
             }
         ],
-    activeIndex: 0,
-    newMessage: '',
-    searchString: '',
+        activeIndex: 0,
+        newMessage: '',
+        searchString: '',
+        showToggle: false,
     },
     methods: {
         setActiveIndex(index){
@@ -197,7 +198,7 @@ new Vue({
                     this.arrContacts[i].visible = false;
                 }
             }
-        }
+        },
     },
 });
 

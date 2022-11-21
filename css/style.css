@@ -220,7 +220,7 @@ body {
 }
 
 .message .message-menu {
-    display: none; /* v-show */
+    /*display: none;*/ /* v-show */
     list-style: none;
     background-color: white;
     border-radius: 0.5rem;

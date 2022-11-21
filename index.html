@@ -52,7 +52,7 @@
                         <img :src="'img/avatar' + eleContact.avatar + '.jpg'" alt="">
                         <div class="contact-text">
                             <h4>{{ eleContact.name }}</h4>
-                            <p>Last message</p>
+                            <p>{{ arrContacts[activeIndex].messages.length }}</p>
                         </div>
                     </div>
                     <div class="time">
@@ -71,7 +71,7 @@
                     :alt="arrContacts[activeIndex].name">
                     <div class="contact-tex">
                         <h4>{{ arrContacts[activeIndex].name }}</h4>
-                        <p>Last access:</p>
+                        <p>Last access: {{ arrContacts[activeIndex].messages.length }}</p>
                     </div>
                 </div>
                 <div class="icons">
